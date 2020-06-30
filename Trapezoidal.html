@@ -1,0 +1,41 @@
+<html>
+    <head>
+    <script type="text/javascript">
+        function f(x)
+        {
+            //var a=prompt("enter");
+            var z= document.getElementById("F1").value;
+            //var x=a;
+            with(Math)
+            {
+                var ans=eval(z);
+            }
+            //alert(ans);
+            return ans;
+        }
+        function fun()
+        {
+            var xn=prompt("enter value of upper limit");
+            var xo=prompt("enter value of lower limit");
+            var n=prompt("enter no of segments");
+            var h=(xn-xo)/n;
+            //0alert("value of h "+h);
+            var sum=f(xo)+f(xn);
+            for(var i=1;i<=n-1;i++)
+            {
+                //alert(sum);
+                sum=sum+2*f(xo+i*h);
+                
+            }
+            var I=sum*h/2;
+            alert("ans is "+I);
+        }
+    </script>
+    </head>
+    <body>
+        enter expression:<input id="F1" type=text>
+        <input type="button" value=click onclick=fun()>
+        <p id=p1></p>
+    </body>
+
+</html

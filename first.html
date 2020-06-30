@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="math.min.js" type="text/javascript"></script>
+<script>
+        function f1()
+        {
+            var a=new Array(3);
+            for(var i=0;i<3;i++)
+            {
+                a[i]=new Array(3);
+            }
+            for(i=0;i<3;i++)
+            {
+                for(var j=0;j<3;j++)
+                {
+                    a[i][j]=prompt("enter elements");
+                }
+            }
+            document.write("<table border=2px>");
+            for(i=0;i<3;i++)
+            {
+                document.write("<tr>");
+                for(j=0;j<3;j++)
+                {
+                    document.write("<td>"+a[i][j]+"</td>");
+                }
+                document.write("</tr>");
+            }
+            document.write("</table>");
+
+        }
+</script>
+</head>
+<body>
+    enter expression:<input id="F1" type=text>
+    <input type="button" value=click onclick=f1()>
+    <p id=p1></p>
+</body>
+</html>

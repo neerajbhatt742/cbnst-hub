@@ -1,0 +1,77 @@
+<html>
+    <head>
+    <script type="text/javascript">
+        function f(x)
+        {
+            //var a=prompt("enter");
+            var z= document.getElementById("F1").value;
+            //var x=a;
+            with(Math)
+            {
+                var ans=eval(z);
+            }
+            //alert(ans);
+            return ans;
+        }
+        function fun()
+        {
+            var ans=0;
+            var i=0;
+            var temp=document.getElementById("p1");
+            temp.innerHtml="";
+            var x1=parseFloat(prompt("enter value of x1"));
+            var x2=parseFloat(prompt("enter value of x2"));
+            //alert(f(x1)+" value of f(x1)");
+            //alert(f(x2)+" value of f(x2)");
+            if(f(x1)*f(x2)<0)
+            {
+                alert("roots lie between x1 & x2");
+                var prev=x1;
+                while(1)
+                {
+                    i=i+1;
+                    var x3=(x1+x2)/2;
+                     //alert(x3+" value");
+                    temp.innerHTML=temp.innerHTML+"It"+i+"= "+x3+"<br>";
+                    if(f(x3)==0)
+                    {
+                       //alert(x3+"is the ans");
+                    ans=x3;
+                    break;
+                    }
+                    else
+                    {
+                        if(f(x1)*f(x3)<0)
+                        {
+                            x2=x3;
+                        }
+                        else 
+                        {
+                            x1=x3;
+                        }
+                        if(Math.abs(x3-prev)<0.001)
+                        {
+                            alert(x3+" is ans");
+                            ans=x3;
+                            break;
+                        }
+                        else
+                        {
+                            prev=x3;
+                        }
+                    }
+                }
+                
+                //var temp=document.getElementById("p1");
+                temp.innerHTML=temp.innerHTML+"<br>ans is "+ans;
+            }
+        }
+    </script>
+    </head>
+    <body>
+        enter expression:<input id="F1" type=text>
+        <input type="button" value=click onclick=fun()>
+        <p id=p1></p>
+    </body>
+
+</html
