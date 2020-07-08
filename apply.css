@@ -80,7 +80,7 @@ h1>u
     left :0;
     width:50%;
     height:100%;
-    background:rgba(255,255,255,.05));
+    background:rgba(255,255,255,.05);
     pointer-events:none;
 }
 .content
