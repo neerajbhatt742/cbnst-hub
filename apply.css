@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400');
+body
+{
+    margin:0;
+    padding:0;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+    background:#060c21;
+    font-family: 'Poppins',sans-serif;
+}
+h1
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 80px;
+    position: relative;;
+    text-align:center;
+    margin-top:5%;
+}
+h1>u
+{
+    background: linear-gradient(to right,rgb(96, 243, 175) 0%,rgb(238, 74, 216) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.container
+{
+    position: relative;
+    width: 90%;
+    display:grid;
+    grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
+    grid-template-rows: auto;
+    grid-gap:0 40px ;
+}
+.container .box
+{
+    position: relative;
+    height:400px;
+    margin-top: 20%;
+    margin-left: 20%;
+    background:#060c21;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border:1px solid #000;
+
+}
+.container .box:before
+{
+    content:'';
+    position: absolute;
+    top:-2px;
+    left:-2px;
+    right:-2px;
+    bottom:-2px;
+    background:#fff;
+    transform:skew(1deg,1deg);
+    z-index:-1;
+}
+ .box:nth-child(2n):before
+{
+    background:linear-gradient(315deg,#ff0057,#e64a19);
+    
+}
+.box:nth-child(2n+1):before
+{
+    background:linear-gradient(315deg,#89ff00,#00bcd4);
+    
+}
+.box:nth-child(3):before
+{
+    background:linear-gradient(315deg,#8400ff,#d400c9);
+    
+}
+.container.box::after
+{
+    content:'';
+    position: absolute;
+    top:0;
+    left :0;
+    width:50%;
+    height:100%;
+    background:rgba(255,255,255,.05));
+    pointer-events:none;
+}
+.content
+{
+    position:relative;
+    padding: 20px;
+    transform:translateY(20px);   
+}
+.content h2
+{
+    position: absolute;
+    top:-60px;
+    right:20px;
+    margin:0;
+    padding:0;
+    font-size: 10em;
+    color:rgba(255,255,255,.05);
+    transition:0.5s;
+}
+.box:hover .content h2
+{
+    top:-100px
+}
+.content h3
+{
+    margin:0 0 10px;
+    padding: 0;
+    font-size: 24px;
+    font-weight: 500;
+    color:#fff;
+}
+.content p
+{
+    margin:0;
+    padding:0;
+    color:#fff;
+    font-size: 16px;
+}
+.content a
+{
+    position:relative;
+    margin:20px 0 0;
+    padding:10px 20px;
+    text-decoration: none;
+    border: 1px solid #fff;
+    display:inline-block;
+    color:#fff;
+    transition:0.5s;
+    transform:translateY(-40px);
+    opacity:0;
+    visibility: hidden;
+}
+.box:hover .content a
+{
+    transform:translateY(0);
+    opacity:1;
+    visibility:visible;
+}
+.content a:hover
+{
+    color:#000;
+    background:#fff;
+    
+}
